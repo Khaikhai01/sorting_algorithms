@@ -1,0 +1,12 @@
+#!/bin/bash
+file=$1
+message=$2
+
+git add $file
+if [ $# -eq 1 ]
+    then
+        git commit -m "Commit message not found"
+else
+    git commit -m "$message"
+fi
+git push
